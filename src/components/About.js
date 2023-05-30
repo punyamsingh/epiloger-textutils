@@ -1,4 +1,4 @@
-import React, {useCallback, useState, useSyncExternalStore} from 'react'
+import React, {useState} from 'react'
 
 export default function About() {
     
