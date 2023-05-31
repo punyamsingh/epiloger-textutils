@@ -1,6 +1,7 @@
-The final working website is now running live.
-You can access it here @https://epiloger-textutils.netlify.app/
-It is a Text utility webapp that can performs functions of a word counter, characcter count, remove spaces and copy to clipboard.
+
+# The final working website is now running live.
+# You can access it here @https://epiloger-textutils.netlify.app/
+# It is a Text utility webapp that can performs functions of a word counter, characcter count, remove spaces and copy to clipboard.
 
 I have used ReactJS to build this webapp and Netlify to deploy it. 
 
