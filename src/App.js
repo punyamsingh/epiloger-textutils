@@ -28,16 +28,16 @@ function App() {
   const toggleMode = () => {
     if (mode === "light") {
       setMode("dark")
-      document.body.style.backgroundColor = 'slategrey'
+      document.body.style.backgroundColor = '#2f4f4f'
       showAlert("we went dark", "success")
     }
     else {
       setMode("light")
-      document.body.style.backgroundColor = '#FFE3DA'
+      document.body.style.backgroundColor = '#8ad1c9'
       showAlert("lighted again", "success")
     }
   }
-  document.body.style.backgroundColor = mode === 'light' ? '#FFE3DA' : 'darkslategrey'
+  document.body.style.backgroundColor = mode === 'light' ? '#8ad1c9' : '#2f4f4f'
 
   return (
     <>
@@ -45,7 +45,7 @@ function App() {
         <NavBar title="Epiloger" mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
         <Routes>
-          <Route exact path="/about" element={<About />} />
+          <Route exact path="/about" element={<About mode={mode} />} />
           <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} />} />
         </Routes>
       </Router>
