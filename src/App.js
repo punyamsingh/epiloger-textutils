@@ -42,13 +42,13 @@ function App() {
   return (
     <>
       <Router>
-        <NavBar title="Textutils" mode={mode} toggleMode={toggleMode} />
+        <NavBar title="TextUtils" mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
         <Routes>
           <Route exact path="/about" element={<About mode={mode} />} />
           <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} />} />
         </Routes>
-        <footer>
+        <footer style={{background:"#000"; padding:"30px 0px"; text-align:"center"}}>
           <p>Author: Epiloger</p>
           <p><a href="https://github.com/punyamsingh/epiloger-textutils">Repo Link</a></p>
         </footer>
