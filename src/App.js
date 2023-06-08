@@ -48,7 +48,7 @@ function App() {
           <Route exact path="/about" element={<About mode={mode} />} />
           <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} />} />
         </Routes>
-        <footer style={{background:"#000"; padding:"30px 0px"; text-align:"center"}}>
+        <footer style={{background:"#000", padding:"30px 0px", textAlign:"center"}}>
           <p>Author: Epiloger</p>
           <p><a href="https://github.com/punyamsingh/epiloger-textutils">Repo Link</a></p>
         </footer>
