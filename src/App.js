@@ -12,32 +12,32 @@ import {
 } from "react-router-dom";
 
 function App() {
-  const [mode, setMode] = useState('light') //whether dark mode is enabled
-  const [alert, setAlert] = useState(null);
+  const [mode,setMode] = useState('light'); //whether dark mode is enabled
+  const [alert,setAlert] = useState(null);
 
-  const showAlert = (message, type) => {
+  const showAlert = (message,type) => {
     setAlert({
       msg: message,
       type: type
-    })
+    });
     setTimeout(() => {
-      setAlert(null)
-    }, 1500);
-  }
+      setAlert(null);
+    },1500);
+  };
 
   const toggleMode = () => {
     if (mode === "light") {
-      setMode("dark")
-      document.body.style.backgroundColor = '#2f4f4f'
-      showAlert("we went dark", "success")
+      setMode("dark");
+      document.body.style.backgroundColor = '#2f4f4f';
+      showAlert("we went dark","success");
     }
     else {
-      setMode("light")
-      document.body.style.backgroundColor = '#8ad1c9'
-      showAlert("lighted again", "success")
+      setMode("light");
+      document.body.style.backgroundColor = '#8ad1c9';
+      showAlert("lighted again","success");
     }
-  }
-  document.body.style.backgroundColor = mode === 'light' ? '#8ad1c9' : '#2f4f4f'
+  };
+  document.body.style.backgroundColor = mode === 'light' ? '#8ad1c9' : '#2f4f4f';
 
   return (
     <>
@@ -48,10 +48,6 @@ function App() {
           <Route exact path="/about" element={<About mode={mode} />} />
           <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} />} />
         </Routes>
-        <footer style={{background:"#000", padding:"30px 0px", textAlign:"center"}}>
-          <p>Author: Epiloger</p>
-          <p><a href="https://github.com/punyamsingh/epiloger-textutils">Repo Link</a></p>
-        </footer>
       </Router>
     </>
   );

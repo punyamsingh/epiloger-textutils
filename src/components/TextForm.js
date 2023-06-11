@@ -73,11 +73,11 @@ export default function TextForm(props) {
                 <button className="btn btn-primary mx-1 my-1" onClick={handleExtraSpaces} >Slice extra spces</button>
                 <button className="btn btn-primary mx-1 my-1" onClick={handleClearClick}>Clear Text</button>
             </div>
-            <div className='container my-2'>
+            <div className='container my-2 mb-5'>
                 <h5 style={{ color: props.mode === 'light' ? '#000000' : '#ffffff' }}>
                     Your text summary
                 </h5>
-                <p style={{ color: props.mode === 'light' ? '#07091a' : '#7bf87f' }}>
+                <p style={{ color: props.mode === 'light' ? '#07091a' : '#39ee90' }}>
                     {text.split(/\s+/).filter((element) => { return element.length !== 0 }).length} words, {text.length} chars
                     <br />
                     {0.008 * text.split(/\s+/).filter((element) => { return element.length !== 0 }).length} min. to read
@@ -85,9 +85,16 @@ export default function TextForm(props) {
                 <h5 style={{ color: props.mode === 'light' ? '#000000' : '#ffffff' }}>
                     Preview
                 </h5>
-                <p style={{ color: props.mode === 'light' ? '#07091a' : '#7bf87f' }}>
+                <p style={{ color: props.mode === 'light' ? '#07091a' : '#39ee90' }}>
                     {text.length > 0 ? text : "Nothing to preview"}
                 </p>
+            </div>
+            <div style={{bottom: 0}} >
+                <div className="fixed-bottom p-1" style={{ color: "#000000",background: "#c2d0ff",textAlign: "right" }}>
+                    <strong >auth_Epiloger &nbsp;<a href="https://github.com/punyamsingh/epiloger-textutils">  Repo &lt;/&gt;</a>&ensp;
+                    </strong>
+
+                </div>
             </div>
         </>
     )
